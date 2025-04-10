@@ -7,15 +7,14 @@ However, all model configurations, scripts, and parameters used for training and
 ### Structure:
    - dev_transcriptions.csv             # Transcriptions of dev audio (Whisper outputs)
    - test_transcriptions.csv            # Transcriptions of test audio (Whisper outputs)
-   ├── transcriptions - transcriptions.csv# General transcription CSV (possibly train)
-   ├── requirements.txt                   # Python dependencies
-   ├── tokenizer.zip                      # Pretrained tokenizer used for text2event fine-tuning
-   ├── xllm-ner.zip                       # Final model weights and config for text2event+LoRA
-   │
-   ├── xllm-speech-ner-whisper.ipynb      # Whisper transcription script (ASR stage)
-   ├── xllm-speech-ner-t2e2.ipynb         # Fine-tuning and evaluation of Text2Event2 with LoRA
-   ├── xllm-speech-ner-bert.ipynb         # BERT-NER experiments (not used in final system)
-   ├── xllm-speech-ner-test.ipynb         # Final pipeline used for shared task testing
+   - transcriptions - transcriptions.csv    # General transcription CSV (Train)
+   - dev_transcriptions.csv    # General transcription CSV (Dev)
+   - test_transcriptions.csv    # General transcription CSV (Test)
+   - requirements.txt                   # Python dependencies
+   - xllm-speech-ner-whisper.ipynb      # Whisper transcription script (ASR stage)
+   - xllm-speech-ner-t2e2.ipynb         # Fine-tuning and evaluation of Text2Event2 with LoRA and other experiments
+   - xllm-speech-ner-bert.ipynb         # BERT-NER experiments (not used in final system)
+   - xllm-speech-ner-test.ipynb         # Random experimental testing
 
 ### Challenges:
    - Dataset provided only audio and event tags, no gold transcripts.
